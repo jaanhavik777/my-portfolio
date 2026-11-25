@@ -40,3 +40,33 @@ figure{margin:0;min-width:0}figcaption{text-align:right;font-style:italic;font-s
 .home-intro h2 { font-size: clamp(1.85rem, 3.5vw, 3rem); }
 .home-intro a { color: var(--blue); font-weight: 650; text-underline-offset: .18em; }
 @media (max-width: 680px) { .home-intro { grid-template-columns: 1fr; } }
+
+/* Give secondary project previews the full card width. */
+.more {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.more .card {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  align-items: start;
+  gap: 1.25rem;
+}
+.more .card h2 {
+  font-size: clamp(1.9rem, 3.2vw, 3.25rem);
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+}
+.more .card > figure {
+  width: 100%;
+}
+.more .screen h3 {
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+.more .tagline {
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+}
+@media (max-width: 680px) {
+  .more { grid-template-columns: minmax(0, 1fr); }
+}
