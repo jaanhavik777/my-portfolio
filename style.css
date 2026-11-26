@@ -70,3 +70,152 @@ figure{margin:0;min-width:0}figcaption{text-align:right;font-style:italic;font-s
 @media (max-width: 680px) {
   .more { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Project previews use each app's own visual style inside the portfolio. */
+.project-preview {
+  min-width: 0;
+  padding: clamp(.85rem, 2.4vw, 1.75rem);
+  border: 1px solid #1b25482b;
+  border-radius: .9rem;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  font-family: system-ui, sans-serif;
+  font-size: .88rem;
+  line-height: 1.4;
+}
+.project-preview h3, .project-preview h4 {
+  margin: 0;
+  font: 700 clamp(1.15rem, 2.2vw, 1.85rem)/1.15 system-ui, sans-serif;
+  color: inherit;
+  letter-spacing: -.035em;
+}
+.pv-tracepredict {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(.8rem, 2vw, 1.5rem);
+  background: radial-gradient(ellipse at top left, #21396b, #0a1434 72%);
+  color: #fff4df;
+}
+.pv-trace-copy p { color: #c2cde9; }
+.pv-mark { display: block; width: .65rem; height: .65rem; background: #ffa0ca; margin-bottom: .55rem; }
+.pv-map { margin-top: .8rem; border: 1px solid #6787c5; background: #101e46; padding: .65rem; }
+.pv-map > div { display: grid; gap: .3rem; margin-top: .45rem; font-size: .75rem; }
+.pv-map span, .pv-map b { padding: .25rem .4rem; border: 1px solid #446091; }
+.pv-map b { border-color: #ffa0ca; color: #ffa0ca; }
+.pv-login { display: grid; gap: .35rem; padding: .75rem; background: #ffeac8; color: #0a1434; box-shadow: 4px 4px #ffa0ca; }
+.pv-login span { font-size: .75rem; font-weight: 650; }
+.pv-field { min-height: 1.75rem; padding: .4rem .5rem; border: 1px solid #727896; border-radius: .3rem; background: #fff8ed; }
+.pv-action { display: inline-block; width: fit-content; margin-top: .35rem; padding: .4rem .65rem; border-radius: .25rem; background: #ffa0ca; }
+.pv-pdf-report-generator {
+  background: #d4e4f7 url("pdf-report-background.jpg") center / 18rem auto;
+  color: #2c3e50;
+}
+.pv-upload-card { max-width: 38rem; margin-inline: auto; padding: 1rem; border-radius: .65rem; background: #bad3f0; }
+.pv-upload-card p { color: #354958; }
+.pv-drop { display: grid; gap: .33rem; justify-items: center; margin-top: .8rem; padding: 1rem .6rem; text-align: center; border-radius: .45rem; background: #dae8fc; }
+.pv-drop span { font-size: 1.65rem; }
+.pv-drop small { color: #405468; }
+.pv-studyspace { background: linear-gradient(#18122b70, #18122bb0), #201433 url("studyspace-background.jpeg") center / cover; color: white; text-align: center; }
+.pv-studyspace h3 { color: #dec2ff; font-family: "Jersey 10", ui-monospace, monospace; }
+.pv-study-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .45rem; margin-top: .8rem; }
+.pv-study-grid > div { display: grid; align-content: start; gap: .15rem; padding: .55rem; border-radius: .55rem; background: #1b1039cf; border: 1px solid #ffffff42; }
+.pv-study-grid small { color: #eee3ff; }
+@media (max-width: 440px) {
+  .pv-tracepredict { grid-template-columns: minmax(0, 1fr); }
+}
+
+.project-screenshot {
+  overflow: hidden;
+  border: 1px solid #1b25482b;
+  border-radius: .9rem;
+}
+.project-screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Use a shared preview frame in the project grid. */
+.more .card {
+  grid-template-rows: 1fr auto;
+}
+.more .card > figure {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+.more .project-screenshot {
+  display: grid;
+  place-items: center;
+  background: #4898e9;
+}
+.more .project-screenshot img {
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+}
+.project-screenshot.chordcloud-screenshot {
+  background: #fff1d6;
+}
+.chordcloud-crop {
+  position: relative;
+  aspect-ratio: 983 / 900;
+  width: 100%;
+  container-type: inline-size;
+  overflow: hidden;
+}
+.project-screenshot .chordcloud-crop img {
+  position: absolute;
+  top: -8.667%;
+  width: 100%;
+  height: auto;
+}
+.chordcloud-playlist-note {
+  position: absolute;
+  top: 56.6%;
+  left: 39%;
+  width: 51%;
+  background: #fff1d6;
+  color: #675967;
+  font: 400 1.5cqw / 1.75 system-ui, sans-serif;
+}
+.more .project-screenshot.chordcloud-screenshot {
+  container-type: size;
+}
+.more .chordcloud-crop {
+  width: min(100%, calc(100cqh * 983 / 900));
+}
+.more .project-preview {
+  padding: clamp(.55rem, 1.5vw, 1.1rem);
+}
+.more .pv-upload-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(.5rem, 1.4vw, .9rem);
+}
+.more .pv-drop {
+  flex: 1;
+  align-content: center;
+  gap: .2rem;
+  margin-top: .45rem;
+  padding: .4rem;
+}
+.more .pv-study-grid {
+  gap: .3rem;
+  margin-top: .5rem;
+}
+.more .pv-study-grid > div {
+  padding: .35rem;
+}
+@media (max-width: 900px) {
+  .more .project-preview {
+    font-size: .78rem;
+  }
+  .more .project-preview h3 {
+    font-size: 1rem;
+  }
+  .more .pv-study-grid small {
+    display: none;
+  }
+}
