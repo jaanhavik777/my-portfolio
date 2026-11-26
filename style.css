@@ -219,3 +219,35 @@ figure{margin:0;min-width:0}figcaption{text-align:right;font-style:italic;font-s
     display: none;
   }
 }
+
+.experience-page {
+  max-width: 56rem;
+}
+.experience-page .casehead {
+  background: none;
+}
+.experience-page .work-entry {
+  padding: clamp(1.1rem, 3.5vw, 2rem);
+}
+.experience-page .work-entry header {
+  gap: .45rem 1.25rem;
+  padding-bottom: .9rem;
+  border-bottom: 1px solid #e6ced2;
+  margin-bottom: 1rem;
+}
+.experience-page .work-entry h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+.experience-page .work-entry h3 {
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+}
+.experience-page .work-meta {
+  padding-top: .25rem;
+  font-size: .9rem;
+}
+.experience-page .work-entry > p {
+  max-width: none;
+}
+.experience-page .work-entry > p + p {
+  margin-top: .85rem;
+}
